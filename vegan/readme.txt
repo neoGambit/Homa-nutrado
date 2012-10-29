@@ -1,10 +1,13 @@
-Copyright 2012 José Carlos Alvarado Garzón
+Copyright 2012 José Carlos Alvarado Garzón <colaborador1> <colaborador2>
 kerno.da.neo@gmail.com
 
 	Homa Nutrado
 
 	Software libre para desarrollar un programa útil al común de las 
-	personas que quieran mejorar su alimentación y conocimiento sobre el tema(vegetariana).
+	personas que quieran mejorar su alimentación y conocimiento sobre el tema.
+
+Copyright 2012 José Carlos Alvarado Garzón <colaborador1> <colaborador2>
+kerno.da.neo@gmail.com
 
 
     This program is free software: you can redistribute it and/or modify

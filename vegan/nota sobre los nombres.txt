@@ -1,0 +1,7 @@
+el nombre de cada archivo se compone de 3 partes. 
+
+1) El número, que indica el orden en que se deberian ir ejecutando.
+
+2) El dato a calcular por el programa en cuestion.
+
+3) Los parametros que requiere el programa.

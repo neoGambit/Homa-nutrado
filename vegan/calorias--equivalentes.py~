@@ -1,0 +1,49 @@
+#! /usr/bin/env python
+# Tu proporcionas tus equivalentes propuestos y te muestra el aporte energetico total. Tambien la cantidad en gramos de grasa, proteinas y carbohidratos(490 gr de carbohidratos,)
+
+#Para un dieta de 2800 kcal, con porcentajes de 70%Ch,20%Li,10%Pr
+#proporcion_gramos=[490,grCh,62.2,grLi,70,grPr]
+
+#Verduras(25kcal)->Frutas(60kcal)->Cereales y Tuberculos(70kcal)->leguminosas(120kcal)->Semillas(70kcal)->Grasas(45kcal)->Azucar(40kcal)
+GET=float(raw_input("Tu GET es:")) #Para calcular gramos de Ch, li, y pr, segun 70%, 20%,10%]
+
+Grupo=		["Verduras","Frutas","Cereales","Leguminosas","Semillas","Grasas","Azucar"]
+
+#		[ V,	F,	C,	L,	S,	G,	A]   
+Calorias=	[24,	60,	68,	121,	69,	45,	40]
+Carbohidratos=	[4,	15,	15,	20,	3,	0,	10]
+Lipidos=	[0,	0,	0,	1,	5,	5,	0]
+Proteinas=	[2,	0,	2,	8,	3,	0,	0]
+
+
+Totalkcal=0
+Totalch=0
+Totalli=0
+Totalpr=0
+### Calculos
+for i in range(7):
+	Equivalentes = float(raw_input("Equivalentes de "+Grupo[i]+":\n"))
+	Kcal= Equivalentes*Calorias[i]
+	Totalkcal += Kcal
+	Hc  = Equivalentes*Carbohidratos[i]
+	Totalch += Hc
+	Li  = Equivalentes*Lipidos[i]
+	Totalli += Li
+	Pr  = Equivalentes*Proteinas[i]
+	Totalpr += Pr
+### GET y gramos recomendados segun 70%, 20%,10%
+recomendado_Ch=	int(	(GET*.70)/4)
+recomendado_Li=	int(	(GET*.20)/9)
+recomendado_Pr=	int(	(GET*.10)/4)
+### Segun los eqs propuestos, los porcentajes alcanzados
+pc_Ch= int(	(Totalch)*(400)/Totalkcal)       # gr=(total*0.7)/4 despejando el %
+pc_Li= int(	(Totalli)*(900)/Totalkcal)
+pc_Pr= int(	(Totalpr)*(400)/Totalkcal)
+#### Resultados
+print "Kcal:",Totalkcal
+print "Carbohidratos(",recomendado_Ch,"recom.)",Totalch,"(Es el ",pc_Ch,"% de ",Totalkcal,")"
+print "Lipidos(",recomendado_Li,"recom.)",Totalli,"(Es el ",pc_Li,"% de ",Totalkcal,")"
+print "Proteina(",recomendado_Pr,"recom.)",Totalpr,"(Es el ",pc_Pr,"% de ",Totalkcal,")"
+####
+
+print "fin"
